@@ -8,7 +8,7 @@ function App(){
       <Hello name={'John'} surname={'Smith'}/>
       <Hello name={'Tom'} surname={'Fox'}/>
       <Hello name={'Ann'} surname={'Tompson'}/>
-      <HelloClass />
+      <HelloClass name={"Vasya"} surname={"Ivanov"} />
     </>
   );
 }
