@@ -1,7 +1,16 @@
-import React, { Component } from 'react'
-import Counter from './Components/Counter';
-import User from './Components/User';
+import UserList from './Components/UserList'
 
+import React from 'react'
+
+export default function App() {
+  return (
+    <UserList />
+  )
+}
+
+
+
+/*
 export default class App extends Component {
   constructor(props) {
     super(props);  
@@ -33,3 +42,5 @@ export default class App extends Component {
     );    
 }
 }
+
+*/
