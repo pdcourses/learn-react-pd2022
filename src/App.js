@@ -1,26 +1,31 @@
-import { Component, Fragment } from 'react';
-import './App.css';
+import React, { Component } from 'react'
 import User from './Components/User';
 
-
-export default class App extends Component{
-  /*
-  constructor(props){
-    super(props);
+export default class App extends Component {
+  constructor(props) {
+    super(props);  
     this.state = {
-      currentUser: {
-        name: "Joth Smith",
-        email: "john@gmail.com",
-        imgSrc: '#',
-      },
-    }
-  }*/
-  render(){
-    return(
-      <>
-        <User />
-      </>
-    )
+       name: 'Tom',
+       surname: 'Fox',
+       age: 20,
+       isSelected: false,
+    };
   }
+  selectHandler = () => {
+    const {isSelected} = this.state;
+    this.setState = ({isSelected: !isSelected});
+  }
+  render() {
+    const {name, surname, age, isSelected} 
+    = this.state;
+    return(
+      <User 
+        name={name}
+        surname={surname}
+        age={age}
+        isSelected={isSelected}
+        selectHandler = {this.selectHandler}
+      />
+    );    
 }
-
+}
