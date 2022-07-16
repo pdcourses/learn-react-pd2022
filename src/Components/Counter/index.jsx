@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import InnerCounter from '../InnerCounter';
 
 export default class Counter extends Component {
   constructor(props) {
@@ -6,13 +7,6 @@ export default class Counter extends Component {
     this.state = {
        value: 0,
     };
-    this.sayHello2 = this.sayHello2.bind(this);
-  }
-  sayHello = () => {
-    alert(this.state.value);
-  }
-  sayHello2(){
-    alert(this.state.value);
   }
   inc = () => { 
     const {value} = this.state;
@@ -24,14 +18,20 @@ export default class Counter extends Component {
     const {step} = this.props;
     this.setState({value: value-step});
   }
+  NewValueHandler = (newValue) => {
+    this.setState({value: newValue});
+  }
   render() {
     const {value} = this.state;
     return (
       <>
         <h2>Counter {value}</h2>
         <button onClick={this.inc}>+</button>
-        <button onClick={value >= 0 ? this.dec : null}>-</button>
-        <button onClick={this.sayHello2}>sayHello</button>
+        <button onClick={this.dec}>-</button>
+        <InnerCounter 
+            value={this.state.value} 
+            NewValueHandler={this.NewValueHandler}
+        />
       </>
     )
   }

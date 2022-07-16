@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Counter from './Components/Counter';
 import User from './Components/User';
 
 export default class App extends Component {
@@ -12,13 +13,15 @@ export default class App extends Component {
     };
   }
   selectHandler = () => {
-    const {isSelected} = this.state;
-    this.setState = ({isSelected: !isSelected});
+    this.setState({isSelected: 
+      !this.state.isSelected});
   }
   render() {
     const {name, surname, age, isSelected} 
     = this.state;
     return(
+      <>
+      <Counter step={1} />
       <User 
         name={name}
         surname={surname}
@@ -26,6 +29,7 @@ export default class App extends Component {
         isSelected={isSelected}
         selectHandler = {this.selectHandler}
       />
+      </>
     );    
 }
 }
