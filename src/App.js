@@ -1,13 +1,10 @@
-import UserList from './Components/UserList'
-import CarList from './Components/CarList';
-
 import React from 'react'
+import UsersPage from './Components/UsersPage'
 
 export default function App() {
   return (
     <>
-    <UserList />
-    <CarList />
+     <UsersPage />
     </>
   )
 }
