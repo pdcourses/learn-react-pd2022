@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styles from './Card.module.css';
 import stc from 'string-to-color';
-
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 export default class Card extends Component {
@@ -9,14 +9,15 @@ export default class Card extends Component {
     const {user: {name, surname, isSelected}, select} = this.props;
     const selectedStyle = isSelected ? styles.selected : null;
     //const color = stc(name.concat(surname))
-    const color = stc(name+surname);
     const initials = name[0].toUpperCase() + surname[0].toUpperCase();
+    const color = stc(initials);
     const styleDiv = {
       backgroundColor: color
     }
     return (
       <li onClick={select} className={selectedStyle}>
-        <div className={styles.colorDiv} style={styleDiv}>
+        {/*<div className={styles.colorDiv+" "+styles.flexCenter} style={styleDiv}>*/}
+        <div className={classNames(styles.colorDiv,styles.flexCenter)} style={styleDiv}>
             {initials}
         </div>
         <p>{name} {surname}</p>
