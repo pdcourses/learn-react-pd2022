@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import InnerCounter from '../InnerCounter';
+import PropTypes from 'prop-types';
 
 export default class Counter extends Component {
   constructor(props) {
@@ -35,4 +36,12 @@ export default class Counter extends Component {
       </>
     )
   }
+}
+
+Counter.propTypes = {
+  step: PropTypes.number
+}
+
+Counter.defaultProps = {
+  step: 1,
 }
