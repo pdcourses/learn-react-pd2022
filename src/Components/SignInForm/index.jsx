@@ -7,19 +7,16 @@ export default class SignInForm extends Component {
         userEmail: '',
         userPassword: '',
       };
-    }
-  
+    }  
  setEmail = (e) => {
     this.setState({userEmail: e.target.value});
  }
-
  setPassword = (e) => {
     this.setState({userPassword: e.target.value});
  }
  handleSubmit = (e) => {
     e.preventDefault();
  }
-
   render() {
     const {userEmail, userPassword} = this.state;
     return (

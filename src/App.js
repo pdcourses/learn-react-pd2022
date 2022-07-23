@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import SignInForm from './Components/SignInForm';
+import ReactPosts from './Components/ReactPosts'
 
 export default class App extends Component {
   render() {
-    return <SignInForm /> 
+    return <ReactPosts />
   }
 }
