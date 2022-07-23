@@ -9,13 +9,13 @@ const db = [
 ];
 
 export default class ReactPosts extends Component {
+  makeList = (p, index) => {
+    return <Post key={index} data={p}/>
+  }
   render() {
     return (
       <div className={styles.post_container}>
-        <Post data = {db[0]}/>
-        <Post data = {db[1]}/>
-        <Post data = {db[2]}/>
-        <Post />
+        db.map(this.makeList)
       </div>
     )
   }
