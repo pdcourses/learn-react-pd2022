@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
-import ClockFun from './Components/ClockFun';
+import CountClick from './Components/CountClick/idnex';
 
 export default class App extends Component {
   render() {
-    return <>
-    <ClockFun step={1} />
-    <ClockFun step={-1} />
-    <ClockFun step={100} />
-    </>
+    return <CountClick />
   }
 }
