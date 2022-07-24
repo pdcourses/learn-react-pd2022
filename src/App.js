@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import Test from './Components/Test'
+import ClockMatrix from './Components/ClockMatrix'
 
 export default class App extends Component {
   render() {
-    return <Test />
+    return <ClockMatrix />
   }
 }
