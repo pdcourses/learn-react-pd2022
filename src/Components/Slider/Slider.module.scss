@@ -3,7 +3,7 @@
 .container{
     @extend %flex-center;
     margin: 0 auto;
-    max-width: 576px;
+    min-width: 576px;
     max-width: 1200px;
     flex-direction: column;
 }
