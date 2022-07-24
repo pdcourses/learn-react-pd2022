@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import CountClick from './Components/CountClick/idnex';
+import Test from './Components/Test'
 
 export default class App extends Component {
   render() {
-    return <CountClick />
+    return <Test />
   }
 }
