@@ -1,8 +1,12 @@
-import React, { Component } from 'react'
-import ClockMatrix from './Components/ClockMatrix'
+import RangeParent from './sandbox/RangeParent'
+ import React from 'react'
+ 
+ export default function App() {
+   return (
+     <div>
+      <RangeParent />
 
-export default class App extends Component {
-  render() {
-    return <ClockMatrix />
-  }
-}
+     </div>
+   )
+ }
+ 
