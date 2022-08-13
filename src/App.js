@@ -11,13 +11,13 @@ import Header from './Components/Header';
 export default function App() {
   return (
     <>
-    <Header />
       <Routes>
-          <Route path='/' element={<MainMenu />} />
-          <Route index element={<Home />} />
-          <Route path='about' element={<About />} />
-          <Route path='products/*' element={<Products />} />
-          <Route path='*' element={<NotFound />} />
+          <Route path='/' element={<MainMenu />}>
+            <Route index element={<Home />} />
+            <Route path='about' element={<About />} />
+            <Route path='products/*' element={<Products />} />
+            <Route path='*' element={<NotFound />} />
+          </Route>
       </Routes>
     </>
   )
