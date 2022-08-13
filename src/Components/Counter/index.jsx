@@ -1,8 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component, PureComponent } from 'react';
 import InnerCounter from '../InnerCounter';
 import PropTypes from 'prop-types';
 
-export default class Counter extends Component {
+/*
+PureComponent
+имеет метод shouldComponentUpdate 
+позволяет сделать первое сравление состояний и пропсов 
+*/
+export default class Counter extends PureComponent {
   constructor(props) {
     super(props);  
     this.state = {
@@ -25,9 +30,11 @@ export default class Counter extends Component {
 
   shouldComponentUpdate(nextProps, nextState){
     const {value} = this.state;
+    const {step } = this.props;
     console.log('next props',nextProps);
     console.log('next state', nextState);
-    return value !== nextState.value;
+    // true - rerender
+    return value !== nextState.value && step !== nextProps.step; 
   }
 
   render() {
