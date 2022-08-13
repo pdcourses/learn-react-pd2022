@@ -1,0 +1,1 @@
+export const PASSWORD_REGEXP = /^\S{8,12}.$/;

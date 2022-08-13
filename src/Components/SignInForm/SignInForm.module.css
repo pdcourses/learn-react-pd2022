@@ -1,0 +1,12 @@
+.passwordValid{
+    border: 2px solid green;
+}
+
+.passwordInvalid{
+    border: 2px solid red;
+}
+
+.input{
+    margin: 10px;
+    width: 80%;
+}
