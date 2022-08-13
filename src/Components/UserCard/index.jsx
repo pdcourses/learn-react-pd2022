@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import styles from './UserCard.module.css';
+import Icon from 'mdi-react';
+import {mdiAccount} from '@mdi/js';
+import AccountBalanceIcon from 'mdi-react/AccountBalanceIcon';
 
 export default class UserCard extends Component {
   constructor(props) {
@@ -15,6 +18,8 @@ export default class UserCard extends Component {
         <h2>{fullName}</h2>   
         <h4>{email}</h4>  
         <h4>{tel}</h4>
+        <Icon path={mdiAccount} onClick={this.accountHandler} />
+        <AccountBalanceIcon onClick={this.balanceHandler} />
       </div>
     )
   }
