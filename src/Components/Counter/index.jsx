@@ -1,13 +1,13 @@
-import React, { Component, PureComponent } from 'react';
-import InnerCounter from '../InnerCounter';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { StepContext } from '../../Contexts';
 
 /*
 PureComponent
 имеет метод shouldComponentUpdate 
 позволяет сделать первое сравление состояний и пропсов 
 */
-export default class Counter extends PureComponent {
+export default class Counter extends Component {
   constructor(props) {
     super(props);  
     this.state = {
@@ -45,6 +45,13 @@ export default class Counter extends PureComponent {
         <h2>Counter {value}</h2>
         <button onClick={this.inc}>+</button>
         <button onClick={this.dec}>-</button>
+
+        <StepContext.Consumer>
+          {step => {
+            return <p>{step}</p>
+          }}
+        </StepContext.Consumer>
+      
       </>
     )
   }

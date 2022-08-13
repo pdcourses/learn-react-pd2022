@@ -1,6 +1,7 @@
 import Counter from './Components/Counter';
+import React, { Component } from 'react';
+import { StepContext } from './Contexts';
 
-import React, { Component } from 'react'
 export default class App extends Component {
   constructor(props) {
     super(props);  
@@ -14,10 +15,15 @@ export default class App extends Component {
   render() {
     const {step} = this.state;
     return (
+      <StepContext.Provider value={step}>
+          <Counter />
+      </StepContext.Provider>
+      /*
       <div>
         <input type="number" value={step} onChange={this.handleStep} />
         <Counter step={step} />
       </div>
+      */
     )
   }
 }
