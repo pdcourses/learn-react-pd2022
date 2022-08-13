@@ -6,11 +6,13 @@ import Products from './Pages/Products';
 import NotFound from './Pages/NotFound';
 import MainMenu from './Components/MainMenu';
 import Header from './Components/Header';
+import CounterFun from './Components/CounterFun';
 
 
 export default function App() {
   return (
     <>
+      <CounterFun step={10}/>
       <Routes>
           <Route path='/' element={<MainMenu />}>
             <Route index element={<Home />} />
