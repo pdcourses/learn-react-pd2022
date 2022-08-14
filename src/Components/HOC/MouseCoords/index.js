@@ -1,0 +1,16 @@
+import React from 'react'
+import { useState } from 'react'
+
+export default function MouseCoords(props) {
+  const [x, setX]  = useState(0); 
+  const [y, setY]  = useState(0); 
+  const {render} = props;
+
+  const handleXY = (e) => {
+    setX(e.clientX);
+    setY(e.clientY);
+  }
+  return (
+    <div onMouseMove={handleXY}>{render(this.state)}</div>
+  )
+}
