@@ -1,12 +1,10 @@
 import React from 'react'
 import {useLoadUsers} from '../../hooks';
-import loadTestUsers from '../../settings/api';
-import loadRandomUsers from '../../settings/api';
+import loadUsersFetch from '../../settings/api';
 
 function LoadUsers(props) {
-  const {data, isFetching, isError} = useLoadUsers(loadTestUsers);
-  //console.log(data);
-  loadRandomUsers();
+  const {data, isFetching, isError} = useLoadUsers(loadUsersFetch);
+  console.log('component data',data);
   return (
     <>
         <h2>Load users component</h2>
