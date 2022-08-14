@@ -8,11 +8,14 @@ import MainMenu from './Components/MainMenu';
 import Header from './Components/Header';
 import CounterFun from './Components/CounterFun';
 
+import LoadUsers from './Components/LoadUsers';
+
 
 export default function App() {
   return (
     <>
-      <CounterFun step={10}/>
+      <LoadUsers />
+      
       <Routes>
           <Route path='/' element={<MainMenu />}>
             <Route index element={<Home />} />
