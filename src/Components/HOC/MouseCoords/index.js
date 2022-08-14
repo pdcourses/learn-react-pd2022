@@ -11,6 +11,6 @@ export default function MouseCoords(props) {
     setY(e.clientY);
   }
   return (
-    <div onMouseMove={handleXY}>{render(this.state)}</div>
+    <div onMouseMove={handleXY}>{render(x,y)}</div>
   )
 }
