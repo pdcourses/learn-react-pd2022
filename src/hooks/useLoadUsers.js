@@ -18,25 +18,11 @@ function useLoadUsers(loadFun) {
 
   useEffect( () => {
     setIsFetching(true);
-    try{
-        const data = loadFun({});
-        setData(data);
-        console.log('data in hook=',data);
-    } catch(error){
-        setIsError(true);
-    } finally{
-        setIsFetching(false);
-    }
-  }, []);
-   /*
-  useEffect( () => {
-    setIsFetching(true);
     loadFun({})
-    .then( (data) => {console.log('hook data=',data); setData(data.results)})
+    .then( (data) => setData(data.results))
     .catch( (error) => setIsError(true))
     .finally(() => { setIsFetching(false)})
   }, []);
-  */
   return {data, isFetching, isError};
 }
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import MouseTracker from './Components/HOC/MouseTracker';
+import LoadUsers from './Components/LoadUsers';
 
 function App(){
-  return <MouseTracker />;
+  return <LoadUsers />;
 }
 
 export default App;

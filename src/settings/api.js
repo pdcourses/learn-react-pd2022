@@ -17,21 +17,10 @@ export default function loadUsersFetch( options = {}){
      const params = queryString.stringify(opt, {arrayFormat: 'comma'});
 
      return fetch(`${config.BASE_URL}?${params}`).then( (response) => response.json());
-     /*
-     (async () => {
-        await fetch(`${config.BASE_URL}?${params}`)
-        .then( (response) => {
-          if(!response.ok) throw new Error(response.statusText);
-          return response.json();
-        })
-        .then ( ({results})  => {console.dir('results = ',results);})
-        .catch( (error) => console.log(error))
-      })();
-      */
+     
 }
 
 /*
-import LoadUsers from './Components/LoadUsers';
 import axios from 'axios';
 
 const options = {
@@ -52,7 +41,6 @@ function loadRandomUsersFetch({results, seed, page}){
   })();
 }
 
-
 const configAxios = {
   timeout: 1000,
   inDownloadProgress: (event) => console.log(event.loaded),
@@ -69,20 +57,4 @@ function loadRandomUsersAxios({results, seed, page}){
   }) ();
 }
 
-
-function App(){
-  loadRandomUsersFetch(options);
-  loadRandomUsersAxios(options);
-  return (
-    <>
-    <p>Load users</p>
-    </>
-  );
-}
-
-export default App;
 */
-
-
-
-
