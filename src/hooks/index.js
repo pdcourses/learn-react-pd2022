@@ -1,1 +1,1 @@
-export {default as useLoadUsers} from './useLoadUsers.js';
+export { default as useMouse } from './useMouse';

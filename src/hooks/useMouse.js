@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
-export default function useMouse() {
+function useMouse() {
   const [mouse, setMouse] = useState([0,0]);
   useEffect( () => {
     const handleXY = ({clientX, clientY}) => setMouse([clientX, clientY]);
@@ -11,3 +11,5 @@ export default function useMouse() {
   }, []);
   return mouse;
 }
+
+export default useMouse;
